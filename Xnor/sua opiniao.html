@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
   <head>
 
@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Xnor</title>
+    <title>X-nor</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
 
   <body>
 
- <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
       <span class="site-heading-upper text-primary mb-3 ">O seu gosto é mais gostoso</span>
       <span class="site-heading-lower font-weight-bold ">X-nor Lanchonete</span>
     </h1>
@@ -32,6 +32,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
       <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">X-nor Lanchonete</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -42,34 +43,64 @@
                 <span class="sr-only">(current)</span>
               </a>
             </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="sobre.html">Sobre</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="pedidos.html">Pedidos</a>
+            </li>
             <li class="nav-item active px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="about.html">Sobre</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="products.html">Pedidos</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="store.html">Sua opnião</a>
+              <a class="nav-link text-uppercase text-expanded" href="sua opiniao.html">Sua opnião</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
+    <section class="page-section cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner text-center rounded">
+              <h2 class="section-heading mb-5">
+                <span class="section-heading-lower">O que achou?</span>
+              </h2>     
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="page-section about-heading">
       <div class="container">
-        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/xnor2.png" alt="">
         <div class="about-heading-content">
           <div class="row">
             <div class="col-xl-9 col-lg-10 mx-auto">
               <div class="bg-faded rounded p-5">
-                <h2 class="section-heading mb-4">
-                  <span class="section-heading-upper">Bons Códigos: Ótimos Lanches.</span>
-                  <span class="section-heading-lower">Sobre a X-NOR</span>
-                </h2>
-                <p>Foi fundada em 2018 por alunos universitário com o fim de se divertir e acabou se tornando uma boa ideia, uma lanchonete delivery online que faz referência a nomes de linguagens de programação, algumas populares outras nem tanto.</p>
-                <p class="mb-0">
-                  Nós garantimos que você vai cair na luxúria com nossas misturas decadentes no momento em que você morder nossos lanches . Junte-se a nós para tornar especial sua rotina diária, um passeio com os amigos ou simplesmente para desfrutar de algum tempo sozinho.</p>
+
+               <div class="row">
+                    <div class="col">
+                    <p><h4>Nome</h4></p>
+                      <input type="text" class="form-control" placeholder="Nome">
+                    </div>
+                    <div class="col">
+                    <p><h4>Sobrenome</h4></p>
+                      <input type="text" class="form-control" placeholder="Sobrenome">
+                    </div>
+                  </div>
+
+                <div class="form-group">
+                  <p><h4>E-mail</h4></p>
+                       <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nome@exemplo.com">
+                </div>
+
+                    <div class="form-group">
+                      <p><h4>Sua opinião</h4></p>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+
+                    <button type="button" class="btn btn-dark">Enviar</button>
+
               </div>
             </div>
           </div>
@@ -88,5 +119,10 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
+
+  <!-- Script to highlight the active date in the hours list -->
+  <script>
+    $('.list-hours li').eq(new Date().getDay()).addClass('today');
+  </script>
 
 </html>
