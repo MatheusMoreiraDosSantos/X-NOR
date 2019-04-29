@@ -7,19 +7,14 @@
         
         public function salvarUsuario($usuario){
           $query = "INSERT INTO usuario
-          (usuario_nome,usuario_email,usuario_rua,usuario_bairro,usuario_cidade,usuario_numero,usuario_cep, usuario_telefone, usuario_senha) 
+          (usuario_nome,usuario_email, usuario_telefone, usuario_senha) 
           VALUES 
-          (:usuario_nome,:usuario_email,:usuario_rua,:usuario_bairro,:usuario_cidade,:usuario_numero,:usuario_cep,:usuario_telefone,:usuario_senha);";
+          (:usuario_nome,:usuario_email,:usuario_telefone,md5(:usuario_senha);";
             
             $statement = Connection::getConexao()->prepare($query);
             
             $statement->bindValue(":usuario_nome",$usuario->getNome());
             $statement->bindValue(":usuario_email",$usuario->getEmail());
-            $statement->bindValue(":usuario_rua",$usuario->getRua());
-            $statement->bindValue(":usuario_bairro",$usuario->getBairro());
-            $statement->bindValue(":usuario_cidade",$usuario->getCidade());
-            $statement->bindValue(":usuario_numero",$usuario->getNumero());
-            $statement->bindValue(":usuario_cep",$usuario->getCep());
             $statement->bindValue(":usuario_telefone",$usuario->getTelefone());
             $statement->bindValue(":usuario_senha", $usuario->getSenha());
             
@@ -110,12 +105,20 @@
 
     public function consultaUsuario($usuario){
 
-        $query = "SELECT * FROM usuario WHERE usuario_email = :usuario_email AND usuario_senha = :usuario_senha LIMIT 1";
+        $query = "SELECT * FROM usuario WHERE usuario_email = :usuario_email AND usuario_senha = md5(:usuario_senha) LIMIT 1";
 
         $statement = Connection::getConexao()->prepare($query);
+       // $result = mysqli_query(Connection::getConexao(), $query);
 
         $statement->bindValue(":usuario_email",$usuario_email);
-        $statement->bindValue(":usuario_id",$usuario_senha);
+        $statement->bindValue(":usuario_senha",$usuario_senha);
+
+        if($statement->rowCount() > 1){
+            $_SESSION['usuario_email']=$usuario_email;
+            header('location: user_area.php');
+            exit();
+            echo "ok rowCount 1 ";
+        }
 
         return $statement->execute();
     }

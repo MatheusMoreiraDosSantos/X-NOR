@@ -46,9 +46,7 @@
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="sobre.html">Sobre</a>
             </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="pedidos.html">Pedidos</a>
-            </li>
+            
             <li class="nav-item active px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="sua_opiniao.php">Sua opnião</a>
             </li>

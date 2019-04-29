@@ -26,10 +26,22 @@
 		$dados = $dao->listarUsuario();
 		echo json_encode($dados);
 	
-	}else if($_POST["operação"] == "entrar"){
-		$dao - new dao();
-		$dados = $dao->consultaLogin();
 	}
+// se o usuario clicar em entrar ira entrar nesta condição, executando a função consultaUsuario -> UsuarioDAO.php
+	if($_POST["operacao"] == "entrar"){
+		
+		$usuario = new Usuario();
+	//$usuario->setId(1);
+		
+		$usuario->setEmail($_POST['usuario_email']);
+		$usuario->setSenha($_POST['usuario_senha']);
+    
+		$dao = new dao();
+
+		$dao->consultaUsuario($usuario);              
+		
+		echo "ok";
+    }
 		
     
 

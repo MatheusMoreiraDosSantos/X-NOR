@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<?php
+    
+  ?>
+
+  <head>
+    <script type="text/javascript" src="js/funcaotabela.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Maikon, Matheus, Nicole">
+
+    <title>X-nor</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/business-casual.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+   <h1 class="site-heading text-center text-white d-none d-lg-block">
+      <span class="site-heading-upper text-primary mb-3 ">O seu gosto é mais gostoso</span>
+      <span class="site-heading-lower font-weight-bold ">X-nor Lanchonete</span>
+    </h1>
+    <center><h3 class="telefone"><img src="img/telefono.png" width="3%">(14) 4002-8922</h3></center>
+
+<!-- Navigation ----------------------------------------------------------------------------->
+<div class="" id="tudo"> 
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Xnor Lanchonete</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="index.html">Home
+                <span class="sr-only"></span>
+              </a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="sobre.html">Sobre</a>
+            </li>
+            <li class="nav-item active px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="pedidos.html">Pedidos</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="sua_opiniao.php">Sua opnião</a>
+            </li>
+            <li class="nav-item px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="depoimentos.html">Depoimentos de Clientes</a>
+            </li>
+            <li class="nav-item  px-lg-4">
+              <a class="nav-link text-uppercase text-expanded" href="entrar.php">Entrar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<!--  pedidos lanches************************************************************************-->
+
+   <section class="page-section margin">
+              <div class="container">
+                <div class="product-item">
+                  <div class="product-item-description d-inline mr-auto">
+                    <div class="bg-faded p-5 rounded">
+                       <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/lanches.png" width="650px" alt="">
+					   <h4>.Lanches </h4>
+<!--   lanche Jaysalada (cb6) ******************************************************************************-->
+    
+	 
+                    <p>.Jeysalada {<br>
+                               ingrediente:Pão, alface,tomate,queijo; <br>
+                               R$ 7,50
+                           </p>} <br>
+                           <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                 <span class="input-group-text">quantidade:</span>
+                              </div>
+                                 <input type="number" class="form-control" id="qtd6">
+                           </div>
+
+                          <div class="form-check btn btn btn-outline-primary">
+                               <input  type="checkbox" value="" id="cb6">
+                                 <label class="form-check-label" for="cb6">
+                                     ADICIONAR AO PACOTE 
+                                 </label>
+                         </div>
+                        <hr class="hr">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+
+<!--   lanche QBacon(cb2)******************************************************************************-->
+                
+              <div class="container">
+                <div class="product-item">
+                  <div class="product-item-description d-inline mr-auto">
+                    <div class="bg-faded p-5 rounded">
+                      <p>.QBacon{<br>
+                          Ingrediente: Pão, hambúrguer, bacon, queijo, presunto e salada; <br>
+                          R$ 13,00
+                     </p>}
+                     <br>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">quantidade:</span>
+                            </div>
+                              <input type="number" class="form-control" id="qtd2">
+                        </div>
+                          <div class="form-check btn btn btn-outline-primary">
+                                  <input  type="checkbox" value="" id="cb2">
+                                <label class="form-check-label" for="cb2">
+                                        ADICIONAR AO PACOTE 
+                                </label>
+                          </div>
+                     <hr class="hr">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+
+<!--   lanche C#urras (cb3) ****************************************************************************-->              <div class="container">
+                <div class="product-item">
+                   <div class="product-item-description d-inline mr-auto">
+                    <div class="bg-faded p-5 rounded">
+                      <p>.C#urras{ <br>
+                          Ingrediente: Pão, alcatra, queijo, presunto e salada;       <br>
+                          R$ 14,00
+                     </p>}
+                     <br>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">quantidade:</span>
+                            </div>
+                              <input type="number" class="form-control" id="qtd3">
+                        </div>
+                           <div class="form-check btn btn btn-outline-primary">
+                                <input  type="checkbox" value="" id="cb3">
+                                 <label class="form-check-label" for="cb3">
+                                    ADICIONAR AO PACOTE 
+                                 </label>
+                          </div>
+                     <hr class="hr">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+
+<!--   lanche QTovo (cb4)******************************************************************************-->
+              <div class="container">
+                <div class="product-item">
+                   <div class="product-item-description d-inline mr-auto">
+                    <div class="bg-faded p-5 rounded">
+                      <p>.QTovo {<br>
+                          Ingrediente:Pão,ovo,queijo,presunto; <br>
+                          R$ 10,00
+                     </p>}
+                     <br>
+                      <div class="input-group mb-3">
+                         <div class="input-group-prepend">
+                              <span class="input-group-text">quantidade:</span>
+                        </div>
+                            <input type="number" class="form-control" id="qtd4">
+                      </div>
+
+                          <div class="form-check btn btn btn-outline-primary">
+                                <input  type="checkbox" value="" id="cb4">
+                                  <label class="form-check-label" for="cb4">
+                                     ADICIONAR AO PACOTE 
+                                  </label>
+                          </div>
+                     <hr class="hr">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+
+<!--   lanche calabresa-C (cb5) ****************************************************************************-->
+                
+              <div class="container">
+                <div class="product-item">
+                  <div class="product-item-description d-inline mr-auto">
+                    <div class="bg-faded p-5 rounded">
+                      <p>.calabresa-C {<br>
+                           ingrediente:Pão, calabresa, mussarela; <br>
+                           R$ 12,00
+                      </p>}
+                       <br>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">quantidade:</span>
+                            </div>
+                            <input type="number" class="form-control" id="qtd5">
+                        </div>
+
+                          <div class="form-check btn btn btn-outline-primary">
+                              <input  type="checkbox" value="" id="cb5">
+                                <label class="form-check-label" for="cb5">
+                                     ADICIONAR AO PACOTE 
+                                </label>
+                          </div>
+                     <hr class="hr">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+
+<!--   lanche X-nor (cb1) *****************************************************************************-->
+                
+              <div class="container">
+                <div class="product-item">
+                   <div class="product-item-description d-inline mr-auto">
+                      <div class="bg-faded p-5 rounded">
+                            <p>.X-nor{<br>
+                          ingrediente:Pão , ovo, calabresa, bacon, presunto, mussarela, cheddar, salada; <br> R$ 15,00
+                     <br>}
+                     </p>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">quantidade:</span>
+                            </div>
+                                <input type="number" class="form-control" id="qtd1">
+                        </div>
+                            <div class="form-check btn btn btn-outline-primary">
+                                  <input  type="checkbox" value="" id="cb1">
+                                    <label class="form-check-label" for="cb1">
+                                      ADICIONAR AO PACOTE 
+                                    </label>
+                            </div>  
+                    </div>
+                  </div>
+                  </div>
+                </div>
+    </section>
+
+<!--   bebidas *****************************************************************************-->
+      <section class="page-section">
+        <div class="container">
+          <div class="product-item">
+            <div class="product-item-description d-inline mr-auto">
+              <div class="bg-faded p-5 rounded">
+                     
+                <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/bebidas.png" width="450px" alt="">
+
+                      <h4>.Bebidas </h4>
+                  <div class="input-group mb-3">
+
+                      <div class="input-group-prepend">
+                          <label class="input-group-text" for="sabores">Bebida</label>
+                      </div>
+                      <select class="custom-select" id="sabores">
+                        <option selected>Selecione</option>
+                        <option value="1">Suco de MaracuJAVA</option>
+                        <option value="2"> Suco de MorangoDB</option>
+                        <option value="3"> Suco de LaranJAVA</option>
+                        <option value="4">Suco de Abacaxi</option>
+                        <option value="5">Coca-Cola</option>
+                        <option value="6">Fanta</option>
+                        <option value="7">Guarana Antarctica</option>
+                      </select>
+                  </div> 
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                           <label class="input-group-text" for="tipo">Tipo</label>
+                        </div>
+                      
+                      <select class="custom-select" id="tipo">
+                        <option selected>Selecione</option>
+                        <option value="1">Suco Copo R$4,00 | refrigerante Lata R$3,00</option>
+                        <option value="2">Suco 600ml R$6,50 | refrigerante Lata R$5,00</option>
+                        <option value="3">Suco 1L R$8,00 | refrigerante 1L R$6,50</option>
+                        <option value="4">Suco 2L R$16,00 | refrigerante 2L R$8,50</option>
+                      </select>
+                    </div>
+
+                      <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Quantidade:</span>
+                            </div>
+                            <input type="number" class="form-control" id="qtd7">
+                      </div>
+
+                      <div class="form-check btn btn btn-outline-primary">
+                          <input  type="checkbox" value="" id="cb7">
+                          <label class="form-check-label" for="cb7">
+                           ADICIONAR AO PACOTE 
+                          </label>
+                      </div>
+              </div>           
+            </div>
+          </div>
+        </div>   
+      </section>
+</div>         
+
+<!--pedidos******************************************************************************-->
+<div id="tabela" class="escondido pedido">           
+  <section class="page-section about-heading">
+    <div class="container">
+      <div class="about-heading-content">
+        <div class="col-xl-9 col-lg-10 mx-auto">
+          <div class="text-white rounded p-5">
+            <form>
+              <p><h4>MEU PACOTE</h4></p>
+                <br>
+                        <table class="table table-sm table-dark ">
+                              <thead>
+                                <tr>
+								<!--Inicio da tabela titulo-->
+                                  <th scope="col">#</th>
+                                  <th scope="col">Produto</th>
+                                  <th scope="col">Quantidade</th>
+                                  <th scope="col">Preço</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr><!-- Itens da tabela-->
+                                  <th scope="row">1</th>
+                                  <td id="produtonome1">X-nor</td>
+                                  <td id="produtoqtd1"></td>
+                                  <td id="produtopreco1"> R$ </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                  <td id="produtonome2">QBacon</td>
+                                  <td id="produtoqtd2"> </td>
+                                  <td id="produtopreco2"> R$ </td>
+                                </tr>
+                                  <tr>
+                                  <th scope="row">3</th>
+                                  <td id="produtonome3">C#urras</td>
+                                  <td id="produtoqtd3">  </td>
+                                  <td id="produtopreco3"> R$ </td>
+                                </tr>
+                                  <tr>
+                                  <th scope="row">4</th>
+                                  <td id="produtonome4">QTovo</td>
+                                  <td id="produtoqtd4">  </td>
+                                  <td id="produtopreco4"> R$ </td>
+                                </tr>
+                                  <tr>
+                                  <th scope="row">5</th>
+                                  <td id="produtonome5">Calabresa-C</td>
+                                  <td id="produtoqtd5">  </td>
+                                  <td id="produtopreco5"> R$ </td>
+                                </tr>
+                                  <tr>
+                                  <th scope="row">6</th>
+                                  <td id="produtonome6">Jeysalada</td>
+                                  <td id="produtoqtd6">  </td>
+                                  <td id="produtopreco6"> R$ </td>
+                                </tr>
+                                  <tr>
+                                  <th scope="row">7</th>
+                                  <td id="produtonome7"></td>
+                                  <td id="produtoqtd7">  </td>
+                                  <td id="produtopreco7"> R$ </td>
+                                </tr>
+                                <!--Final da tabela-->
+								<tr>
+                                  <th scope="row">&raquo;</th>
+                                  <td colspan="2">TOTAL R$</td>
+                                  <td id="total">R$ </td>
+                                </tr>
+                              </tbody>
+                        </table>
+
+                        <div class="form-check btn btn margin-top btn-light">
+                           <input  type="checkbox" value="" id="btn" onclick="funcaotabela()">
+                              <label class="form-check-label" for="btn">
+                                    CALCULAR MEU PEDIDO 
+                              </label>
+                        </div>
+
+                        <div class="form-check btn margin-top  btn-light">
+                            <input  type="checkbox" value="" id="retirar" onclick="mostrarendereco()">
+                                <label class="form-check-label" for="retirar">
+                                RETIRAR NA LANCHONETE
+                                </label>
+                        </div>
+
+              <!--inicio formulario -->          
+                <div class="" id="pedido">
+                  <div class="row">
+                    <div class="col">
+                        <p><h4>Nome</h4></p>
+                        <input type="text" name="texto" class="form-control" placeholder="Nome">
+                    </div>
+                    <div class="col">
+                        <p><h4>Sobrenome</h4></p>
+                      <input type="text" class="form-control" name="texto" placeholder="Sobrenome">
+                    </div>
+                  </div>
+                      <div class="form-group">
+                          <p><h4>Seu Endereço</h4></p>
+                            <input  name="texto" class="form-control" id="exampleFormControlInput1" placeholder="Bairro, rua, número.">
+                      </div>
+
+                    <div class="form-group">
+                      <p><h4>Observação</h4></p>
+                      <textarea class="form-control" name="texto" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+                    <p>Se desejar pode pagar para o nosso entregador. Obrigado.</p>
+                <button type="button" class="btn btn-dark" onClick="">COMPRAR</button>
+            </form>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </section>
+</div>      
+        
+        <!--este é icone do pacote -->
+         <div class="pacote" >
+            <input type="checkbox" onclick="mostrartabela()" name="" id="cbtabela"> 
+               <label  for="cbtabela">
+                  <img src="img/Icon-package.png" width="100">
+                 <p class="txtpacote">Meu Pacote</p>
+               </label>
+          </div>
+
+<!--  pedidos fim *************************************************************************-->
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+        <p class="m-0 small">Copyright &copy; Xnorlanchonete 2018</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>

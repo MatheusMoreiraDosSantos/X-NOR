@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<?php
+session_start(); //inicia a sessao
+?>
 
   <head>
 
@@ -46,9 +49,7 @@
             <li class="nav-item px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="sobre.html">Sobre</a>
             </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="pedidos.html">Pedidos</a>
-            </li>
+           
             <li class="nav-item  px-lg-4">
               <a class="nav-link text-uppercase text-expanded" href="sua_opiniao.php">Sua opnião</a>
             </li>
@@ -68,30 +69,44 @@
         <div class="row">
           <div class="col-xl-9 mx-auto">
             <div class="cta-inner text-center rounded">
-                <?php
+                <!-- </?php
                     if(!empty($_GET['message'])) {
                         $message = $_GET['message'];
                         echo ('<div class="alert alert-success">
                              <p><h4>'.$message.'</h4></p>
                              </div>');
                     }
-                ?>
+                ?> -->
               <div class="card">
                 <article class="card-body">
 
                   <h4 class="card-title text-center mb-4 mt-1">Entrar</h4>
 
                     <hr>
+                    <form   onsubmit="return consultaUsuario();" id="consultaUsuario">
 
-                    <p class="text-success text-center">Bem-Vindo</p>
-                    
-                    <form action="controlpannel.php" id="usuarioLogin" method="POST">
+                    <!-- verificacao de senha -->
+                    <!-- <//?php 
+                       if(isset($_SESSION['nao_autenticado'])):
+                    ?> 
+                    <script language="javascript" type="text/javascript">
+                       navigator.vibrate(500);
+                    </script>
+                  
+                    <div class="alert alert-danger" role="alert">
+                       SENHA OU USUÁRIO INCORRETOS!
+                    </div>
+                  <//?php
+                    endif;
+                     unset($_SESSION['nao_autenticado']);
+                  ?> -->
+
                       <div class="form-group">
                           <div class="input-group">
                              <div class="input-group-prepend">
                                  <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                              </div>
-                            <input name="" class="form-control" placeholder="Email" type="email">
+                            <input name="usuario_email" id="usuario_email" class="form-control" placeholder="Email" type="email">
                           </div> <!-- input-group.// -->
                       </div> <!-- form-group// -->
                       <div class="form-group">
@@ -99,14 +114,14 @@
                            <div class="input-group-prepend">
                              <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                           </div>
-                            <input class="form-control" placeholder="******" type="password">
+                            <input class="form-control" name="usuario_senha" id="usuario_senha" placeholder="******" type="password">
                         </div> <!-- input-group.// -->
                       </div> <!-- form-group// -->
                       <div class="form-group">
                         <input type="hidden" value="entrar" name="operacao"/>
                         <button type="submit" class="btn btn-primary btn-block"> Entrar  </button>
                       </div> <!-- form-group// -->
-                      <!--<p class="text-center"><a href="#" class="btn">Esqueceu a senha?</a></p>-->
+                      <p class="text-center"><a href="#" class="btn">Esqueceu a senha?</a></p>
                     </form>
 
                   <p class="text-center"><button class="btn btn-primary"data-toggle="modal" data-target="#exampleModal">Cadastre-se</button></p>
@@ -124,7 +139,7 @@
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body" id="dialog">
                          <form onsubmit="return salvarUsuario();" id="salvarUsuario" method="POST">
                             <div class="form-group" style="padding: 30px;">
                                 <div class="row">
@@ -219,12 +234,6 @@
                 'data' : $("#salvarUsuario").serialize(),  
                 'success' : function(data) {              
                   alert('Data: '+data);
-                  var datatable = $("#data_table").DataTable(); 
-                  datatable.clear();  
-                  var dataSet = JSON.parse(data);   
-                  console.log(dataSet); 
-                  datatable.rows.add(dataSet);    
-                  datatable.draw();
                   return false;
                 },
                 'error' : function(request,error)
@@ -233,9 +242,31 @@
                     return false;
                 }
             });
+            $( "#dialog" ).dialog("close");// problema nesta linha
             
             return false;
         }
+        function consultaUsuario(){
+            $.ajax({
+
+                'url' : 'actions/UsuarioActions.php',
+                'type' : 'POST',
+                'data' : $("#consultaUsuario").serialize(),  
+                'success' : function(data) {              
+                        alert('Data: '+data);
+						          	return false;
+                },
+                'error' : function(request,error)
+                {
+                    alert("Request: "+JSON.stringify(request));
+                    return false;
+                }
+            });
+           
+            return false;
+        }
+
+        
    </script>
 
   </body>
