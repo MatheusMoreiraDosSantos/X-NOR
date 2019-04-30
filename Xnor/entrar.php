@@ -253,7 +253,7 @@ session_start(); //inicia a sessao
                 'type' : 'POST',
                 'data' : $("#consultaUsuario").serialize(),  
                 'success' : function(data) {              
-                        alert('Data: '+data);
+                        alert('Data: ');
 						          	return false;
                 },
                 'error' : function(request,error)

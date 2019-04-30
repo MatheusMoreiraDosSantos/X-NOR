@@ -104,27 +104,30 @@
     }
 
     public function consultaUsuario($usuario){
+       
+        try{
+             $query = "SELECT * FROM usuario WHERE usuario_email = :usuario_email AND usuario_senha = md5(:usuario_senha) LIMIT 1";
 
-        $query = "SELECT * FROM usuario WHERE usuario_email = :usuario_email AND usuario_senha = md5(:usuario_senha) LIMIT 1";
+             $statement = Connection::getConexao()->prepare($query);
+             $statement->execute();
+             $statement->bindValue(":usuario_email",$usuario->getEmail());
+             $statement->bindValue(":usuario_senha",$usuario->getSenha());
+             
+             if ($statement->rowCount() == 0) {
+                header('location: ../entrar.php');
+             }else{
+                 session_start();
+                 $result = $statement->fetch();
+                 $_SESSION('usuario_email');
+                 //$_SESSION('login') = 'true';
+                 header('location: ../user_area.php');
 
-        $statement = Connection::getConexao()->prepare($query);
-       // $result = mysqli_query(Connection::getConexao(), $query);
-
-        $statement->bindValue(":usuario_email",$usuario_email);
-        $statement->bindValue(":usuario_senha",$usuario_senha);
-
-        if($statement->rowCount() > 1){
-            $_SESSION['usuario_email']=$usuario_email;
-            header('location: user_area.php');
-            exit();
-            echo "ok rowCount 1 ";
+             }
+        } catch(PDOException $e){
+            return $e;
         }
-
-        return $statement->execute();
-    }
-    
-    
-    }
+     } 
+  }
 
 
 

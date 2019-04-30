@@ -19,8 +19,7 @@
 		$dao = new dao();
 
 		$dao->salvarUsuario($usuario);              
-		
-		echo "ok";
+	
     }else if($_POST["operacao"] == "listar"){
 		$dao = new dao();
 		$dados = $dao->listarUsuario();
@@ -40,7 +39,7 @@
 
 		$dao->consultaUsuario($usuario);              
 		
-		echo "ok";
+		
     }
 		
     
