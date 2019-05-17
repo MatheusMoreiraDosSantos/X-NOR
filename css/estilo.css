@@ -1,0 +1,52 @@
+.pacote{
+	background-color: #000000d1;
+	color: white;
+    position: fixed;
+    margin-right: 10px;
+    bottom: 0;
+    right: 0;
+    z-index: 999999;
+    width:128px;
+    height: 140px;
+    border-radius:20px;
+    padding:10px;
+ 	padding-top: 12px;
+}
+.txtpacote{
+	margin-top: -5px;
+	margin-left: 10px;
+	z-index: 999999;
+	font-family: sans-serif;
+	font-size: 18px;
+}
+
+.escondido {
+   display: none;
+
+}
+#cbtabela{
+	display: none;
+}
+.pedido{
+	width: 100%;
+	margin-top: -100px;
+}
+#tabela{
+	background-color: #000000d1;
+	margin-top: 10%;
+
+}
+#btn{
+	display: none;
+	color: white;
+}
+.margin-top{
+	margin-top: 5%;
+}
+.hr{
+	    border-top: 5px solid #014e6f;
+	    border-radius: 3px;
+}
+.telefone{
+	color: white;
+}
